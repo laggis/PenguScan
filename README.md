@@ -7,8 +7,6 @@ This README documents the comprehensive enhancements made to the virus scanner (
 - `server.lua` - Example of heavily obfuscated malicious Lua code
 - `README.md` - This documentation file
 
-### Major Improvements Made:
-
 #### 1. Fixed Critical Issues:
 - **Typo correction**: "resoures" → "resources"
 - **Missing Malware D detection**: Added proper `findstr` command for Discord webhooks
