@@ -92,6 +92,36 @@ if %errorlevel%==0 (
 set malwarefound=1
 )
 echo ------------------------------------
+echo [Penguin power] Malware V - Base64 decode patterns
+findstr /s /m "base64" *.lua >> VirusBase64.txt
+if %errorlevel%==0 (
+set malwarefound=1
+)
+echo ------------------------------------
+echo [Penguin power] Malware W - XOR obfuscation
+findstr /s /m "bit32\.bxor\|bit\.bxor" *.lua >> VirusXOR.txt
+if %errorlevel%==0 (
+set malwarefound=1
+)
+echo ------------------------------------
+echo [Penguin power] Malware X - Bytecode loading
+findstr /s /m "loadstring\|string\.dump" *.lua >> VirusBytecode.txt
+if %errorlevel%==0 (
+set malwarefound=1
+)
+echo ------------------------------------
+echo [Penguin power] Malware Y - Suspicious concatenation
+findstr /s /m "\.\.\.\.\." *.lua >> VirusConcat.txt
+if %errorlevel%==0 (
+set malwarefound=1
+)
+echo ------------------------------------
+echo [Penguin power] Malware Z - Encoded function calls
+findstr /s /m "getfenv\|setfenv\|debug\.getinfo" *.lua >> VirusEnvManip.txt
+if %errorlevel%==0 (
+set malwarefound=1
+)
+echo ------------------------------------
 
 if %malwarefound%==1 (
 echo [Penguin power] Malware found! Check the above logged bad resource files. They contain malicious code. Use source comparison to remove it.
