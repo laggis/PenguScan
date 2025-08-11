@@ -44,9 +44,3 @@ Run `Virus_scan.bat` to scan all .lua files in the current directory. The scanne
 - Create separate log files for each malware type detected
 - Report if any malicious patterns are found
 - Recommend using source comparison to remove malicious code
-
-## ⚠️ WARNING
-**The `server.lua` file in this folder is MALICIOUS and should be deleted or quarantined immediately!**
-
----
-*Enhanced by AI Assistant to improve malware detection capabilities*
